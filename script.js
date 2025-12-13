@@ -127,14 +127,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const parent = img.closest('.gallery-item-featured');
             if (parent) {
                 setTimeout(function() {
-                    img.style.minHeight = '400px';
+                    img.style.minHeight = '280px';
                     img.style.height = 'auto';
                     parent.style.height = 'auto';
                 }, 200);
-
-                setTimeout(function() {
-                    img.style.minHeight = '500px';
-                }, 500);
             }
         }
     }

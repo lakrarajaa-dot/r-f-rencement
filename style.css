@@ -561,9 +561,9 @@ section {
     }
 
     .gallery-item-featured .gallery-image {
-        width: 800px;
+        width: 450px;
         height: auto;
-        min-height: 300px;
+        min-height: 250px;
         object-fit: cover;
         object-position: center;
         display: block;
@@ -577,50 +577,39 @@ section {
         padding: 30px 20px;
     }
 
-    .container {
-        overflow: visible;
-    }
 
     .about-content p {
-        font-size: 0.7rem;
-        line-height: 1.2;
-        width: 120%;
-        margin-left: -10%;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        width: 105%;
     }
 
     .header-intro {
-        font-size: 0.65rem;
-        width: 150%;
-        line-height: 1.1;
-        margin-left: -25%;
+        font-size: 0.95rem;
+        width: 108%;
     }
 
     .section-intro {
-        font-size: 0.7rem;
-        width: 130%;
-        line-height: 1.2;
-        margin-left: -15%;
+        font-size: 0.95rem;
+        width: 106%;
     }
 
     .experience-content > p {
-        font-size: 0.65rem;
-        line-height: 1.1;
-        width: 140%;
-        margin-left: -20%;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        width: 107%;
     }
 
     .skill-category > p {
-        font-size: 0.7rem;
-        line-height: 1.1;
-        width: 125%;
-        margin-left: -12.5%;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        width: 105%;
     }
 
     .contact-details > p {
-        font-size: 0.7rem;
-        line-height: 1.1;
-        width: 135%;
-        margin-left: -17.5%;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        width: 106%;
     }
 
     .skills-grid {
@@ -672,9 +661,9 @@ section {
     }
 
     .gallery-item-featured .gallery-image {
-        width: 1000px;
+        width: 500px;
         height: auto;
-        min-height: 400px;
+        min-height: 280px;
         object-fit: cover;
         object-position: top left;
         display: block;
@@ -685,50 +674,34 @@ section {
         grid-auto-rows: auto;
     }
 
-    .container {
-        overflow-x: visible;
-    }
-
     .header-intro {
-        font-size: 0.5rem;
-        width: 180%;
-        line-height: 1;
-        margin-left: -40%;
+        font-size: 0.85rem;
+        width: 110%;
     }
 
     .section-intro {
-        font-size: 0.55rem;
-        width: 160%;
-        line-height: 1;
-        margin-left: -30%;
+        font-size: 0.85rem;
+        width: 108%;
     }
 
     .about-content p {
-        font-size: 0.55rem;
-        width: 150%;
-        line-height: 1;
-        margin-left: -25%;
+        font-size: 0.85rem;
+        width: 107%;
     }
 
     .experience-content > p {
-        font-size: 0.5rem;
-        width: 170%;
-        line-height: 1;
-        margin-left: -35%;
+        font-size: 0.85rem;
+        width: 108%;
     }
 
     .skill-category > p {
-        font-size: 0.55rem;
-        width: 145%;
-        line-height: 1;
-        margin-left: -22.5%;
+        font-size: 0.85rem;
+        width: 106%;
     }
 
     .contact-details > p {
-        font-size: 0.55rem;
-        width: 155%;
-        line-height: 1;
-        margin-left: -27.5%;
+        font-size: 0.85rem;
+        width: 107%;
     }
 
     .gallery-overlay {
@@ -740,9 +713,7 @@ section {
     }
 
     .gallery-overlay p {
-        font-size: 0.6rem;
-        width: 120%;
-        overflow: visible;
+        font-size: 0.8rem;
     }
 
     .skill-category {
