@@ -89,5 +89,23 @@ document.addEventListener('DOMContentLoaded', function() {
         aboutContent.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(aboutContent);
     }
+
+    // Observer les catégories de compétences
+    const skillCategories = document.querySelectorAll('.skill-category');
+    skillCategories.forEach((category, index) => {
+        category.style.opacity = '0';
+        category.style.transform = 'translateY(20px)';
+        category.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        observer.observe(category);
+    });
+
+    // Observer les éléments d'expérience
+    const experienceItems = document.querySelectorAll('.experience-item');
+    experienceItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateX(-20px)';
+        item.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
+        observer.observe(item);
+    });
 });
 
