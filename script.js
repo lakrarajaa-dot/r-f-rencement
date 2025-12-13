@@ -100,6 +100,27 @@ document.addEventListener('DOMContentLoaded', function() {
             sum += Math.random();
         }
     });
+    
+
+
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+          const banner = document.createElement("div");
+          banner.textContent = "Nouveau contenu chargé après le rendu";
+          
+          banner.style.height = "140px";
+          banner.style.backgroundColor = "#f0f0f0";
+          banner.style.display = "flex";
+          banner.style.alignItems = "center";
+          banner.style.justifyContent = "center";
+          banner.style.fontSize = "18px";
+          banner.style.fontWeight = "bold";
+      
+          document.body.prepend(banner);
+        }, 1500);
+      });
+      
+
 
     window.addEventListener('resize', function() {
         let sum = 0;
