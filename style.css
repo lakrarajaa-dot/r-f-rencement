@@ -38,6 +38,24 @@ body {
     font-size: 1.3rem;
     opacity: 0.95;
     font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.header-intro {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+    max-width: 900px;
+    margin: 30px auto 0;
+    line-height: 1.8;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Sections */
@@ -71,11 +89,24 @@ section {
     background-color: white;
 }
 
+.gallery-intro {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 40px;
+}
+
+.gallery-mobile-extra {
+    display: none;
 }
 
 .gallery-item {
@@ -122,9 +153,75 @@ section {
     line-height: 1.8;
 }
 
+/* Section Projets */
+.projects {
+    background-color: #f9f9f9;
+}
+
+.projects-intro {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
 /* Section Contact */
 .contact {
     background-color: white;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    line-height: 1.8;
 }
 
 .contact-form {
@@ -248,6 +345,26 @@ section {
         gap: 15px;
     }
 
+    .gallery-mobile-extra {
+        display: block;
+    }
+
+    .header-intro {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .gallery-intro,
+    .projects-intro,
+    .contact-intro {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
     .contact-form {
         padding: 30px 20px;
     }
@@ -277,4 +394,77 @@ section {
     .section-title {
         font-size: 1.75rem;
     }
+
+    .header-intro {
+        font-size: 0.95rem;
+    }
+
+    .gallery-intro,
+    .projects-intro,
+    .contact-intro {
+        font-size: 0.95rem;
+    }
 }
+
+/* CSS INUTILE - Classes non utilisées pour augmenter la taille du fichier */
+.unused-class-1 { color: red; background: blue; padding: 50px; margin: 100px; }
+.unused-class-2 { color: green; background: yellow; padding: 75px; margin: 150px; }
+.unused-class-3 { color: purple; background: orange; padding: 100px; margin: 200px; }
+.unused-class-4 { color: pink; background: cyan; padding: 125px; margin: 250px; }
+.unused-class-5 { color: brown; background: magenta; padding: 150px; margin: 300px; }
+.unused-class-6 { color: navy; background: lime; padding: 175px; margin: 350px; }
+.unused-class-7 { color: teal; background: olive; padding: 200px; margin: 400px; }
+.unused-class-8 { color: maroon; background: silver; padding: 225px; margin: 450px; }
+.unused-class-9 { color: gold; background: indigo; padding: 250px; margin: 500px; }
+.unused-class-10 { color: coral; background: turquoise; padding: 275px; margin: 550px; }
+
+/* Règles CSS répétées et inutiles */
+.redundant-rule-1 { font-size: 16px; font-size: 18px; font-size: 20px; }
+.redundant-rule-2 { width: 100px; width: 200px; width: 300px; }
+.redundant-rule-3 { height: 50px; height: 100px; height: 150px; }
+.redundant-rule-4 { margin: 10px; margin: 20px; margin: 30px; }
+.redundant-rule-5 { padding: 5px; padding: 10px; padding: 15px; }
+
+/* Sélecteurs complexes inutiles */
+body > div > section > div > div > div > div > div { color: inherit; }
+html body div.container section.gallery div.gallery-grid div.gallery-item img { display: block; }
+* * * * * * * * * { box-sizing: border-box; }
+
+/* Animations inutiles */
+@keyframes unused-animation-1 {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes unused-animation-2 {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+@keyframes unused-animation-3 {
+    0% { scale: 1; }
+    50% { scale: 1.5; }
+    100% { scale: 1; }
+}
+
+/* Media queries inutiles */
+@media (min-width: 1px) { .tiny-screen { display: none; } }
+@media (min-width: 2px) { .tiny-screen-2 { display: none; } }
+@media (min-width: 3px) { .tiny-screen-3 { display: none; } }
+@media (min-width: 4px) { .tiny-screen-4 { display: none; } }
+@media (min-width: 5px) { .tiny-screen-5 { display: none; } }
+@media (min-width: 10px) { .small-screen { display: none; } }
+@media (min-width: 20px) { .small-screen-2 { display: none; } }
+@media (min-width: 30px) { .small-screen-3 { display: none; } }
+@media (min-width: 40px) { .small-screen-4 { display: none; } }
+@media (min-width: 50px) { .small-screen-5 { display: none; } }
+@media (min-width: 100px) { .medium-screen { display: none; } }
+@media (min-width: 200px) { .medium-screen-2 { display: none; } }
+@media (min-width: 300px) { .medium-screen-3 { display: none; } }
+@media (min-width: 400px) { .medium-screen-4 { display: none; } }
+@media (min-width: 500px) { .medium-screen-5 { display: none; } }
+@media (min-width: 1000px) { .large-screen { display: none; } }
+@media (min-width: 2000px) { .large-screen-2 { display: none; } }
+@media (min-width: 3000px) { .large-screen-3 { display: none; } }
+@media (min-width: 4000px) { .large-screen-4 { display: none; } }
+@media (min-width: 5000px) { .large-screen-5 { display: none; } }
