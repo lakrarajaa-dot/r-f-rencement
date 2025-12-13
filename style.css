@@ -97,6 +97,8 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 40px;
+    /* Pas de hauteur fixe pour permettre les shifts */
+    align-items: start;
 }
 
 .gallery-item {
@@ -116,10 +118,10 @@ section {
 
 .gallery-image {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: transform 0.5s ease;
-    /* Pas d'attributs width/height définis dans le HTML pour provoquer CLS */
+    display: block;
 }
 
 .gallery-item:hover .gallery-image {
@@ -530,7 +532,7 @@ section {
     opacity: 0.7;
 }
 
-/* Responsive Design - PROBLÈMES INTENTIONNELS */
+/* Responsive Design */
 @media (max-width: 768px) {
     .header-title {
         font-size: 2.5rem;
@@ -553,31 +555,29 @@ section {
         gap: 15px;
     }
 
-    /* Images mal proportionnées sur mobile - au moins 4 images */
-    .gallery-item-mobile-broken .gallery-image {
-        width: 800px;
-        height: 200px;
-        object-fit: none;
-        object-position: center;
+    .gallery-item-featured {
+        aspect-ratio: auto;
+        height: auto;
     }
 
-    .gallery-item-mobile-broken {
-        aspect-ratio: auto;
-        height: 200px;
-        overflow: hidden;
+    .gallery-item-featured .gallery-image {
+        width: 800px;
+        height: auto;
+        min-height: 300px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .gallery-grid {
+        grid-auto-rows: auto;
     }
 
     .contact-form {
         padding: 30px 20px;
     }
 
-    /* Textes avec problèmes sur mobile - débordement intentionnel */
     .container {
-        overflow: visible;
-        max-width: 100%;
-    }
-
-    .about-content {
         overflow: visible;
     }
 
@@ -585,69 +585,41 @@ section {
         font-size: 0.7rem;
         line-height: 1.2;
         width: 120%;
-        max-width: none;
-        overflow: visible;
-        word-wrap: normal;
-        white-space: normal;
         margin-left: -10%;
     }
 
     .header-intro {
         font-size: 0.65rem;
-        padding: 0;
         width: 150%;
-        max-width: none;
         line-height: 1.1;
-        overflow: visible;
         margin-left: -25%;
     }
 
     .section-intro {
         font-size: 0.7rem;
-        padding: 0;
         width: 130%;
-        max-width: none;
         line-height: 1.2;
-        overflow: visible;
         margin-left: -15%;
-    }
-
-    .experience-content {
-        overflow: visible;
     }
 
     .experience-content > p {
         font-size: 0.65rem;
         line-height: 1.1;
         width: 140%;
-        max-width: none;
-        overflow: visible;
         margin-left: -20%;
-    }
-
-    .skill-category {
-        overflow: visible;
     }
 
     .skill-category > p {
         font-size: 0.7rem;
         line-height: 1.1;
         width: 125%;
-        max-width: none;
-        overflow: visible;
         margin-left: -12.5%;
-    }
-
-    .contact-details {
-        overflow: visible;
     }
 
     .contact-details > p {
         font-size: 0.7rem;
         line-height: 1.1;
         width: 135%;
-        max-width: none;
-        overflow: visible;
         margin-left: -17.5%;
     }
 
@@ -694,76 +666,68 @@ section {
         font-size: 1.75rem;
     }
 
-    /* Images encore plus cassées sur très petit écran */
-    .gallery-item-mobile-broken .gallery-image {
+    .gallery-item-featured {
+        aspect-ratio: auto;
+        height: auto;
+    }
+
+    .gallery-item-featured .gallery-image {
         width: 1000px;
-        height: 150px;
-        object-fit: none;
+        height: auto;
+        min-height: 400px;
+        object-fit: cover;
         object-position: top left;
+        display: block;
     }
 
-    .gallery-item-mobile-broken {
-        height: 150px;
-        overflow: hidden;
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
     }
 
-    /* Textes encore plus problématiques sur très petit écran */
     .container {
-        overflow: visible;
-        max-width: 100%;
+        overflow-x: visible;
     }
 
     .header-intro {
         font-size: 0.5rem;
         width: 180%;
-        max-width: none;
         line-height: 1;
-        overflow: visible;
         margin-left: -40%;
     }
 
     .section-intro {
         font-size: 0.55rem;
         width: 160%;
-        max-width: none;
         line-height: 1;
-        overflow: visible;
         margin-left: -30%;
     }
 
     .about-content p {
         font-size: 0.55rem;
         width: 150%;
-        max-width: none;
         line-height: 1;
-        overflow: visible;
         margin-left: -25%;
     }
 
     .experience-content > p {
         font-size: 0.5rem;
         width: 170%;
-        max-width: none;
         line-height: 1;
-        overflow: visible;
         margin-left: -35%;
     }
 
     .skill-category > p {
         font-size: 0.55rem;
         width: 145%;
-        max-width: none;
         line-height: 1;
-        overflow: visible;
         margin-left: -22.5%;
     }
 
     .contact-details > p {
         font-size: 0.55rem;
         width: 155%;
-        max-width: none;
         line-height: 1;
-        overflow: visible;
         margin-left: -27.5%;
     }
 

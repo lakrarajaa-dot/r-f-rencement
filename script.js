@@ -107,5 +107,44 @@ document.addEventListener('DOMContentLoaded', function() {
         item.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
         observer.observe(item);
     });
+
+    // Ajustement des images featured sur mobile
+    const featuredImages = document.querySelectorAll('.gallery-item-featured .gallery-image');
+    featuredImages.forEach(function(img) {
+        if (img.complete) {
+            adjustImageSize(img);
+        } else {
+            img.addEventListener('load', function() {
+                setTimeout(function() {
+                    adjustImageSize(img);
+                }, 100);
+            });
+        }
+    });
+
+    function adjustImageSize(img) {
+        if (window.innerWidth <= 768) {
+            const parent = img.closest('.gallery-item-featured');
+            if (parent) {
+                setTimeout(function() {
+                    img.style.minHeight = '400px';
+                    img.style.height = 'auto';
+                    parent.style.height = 'auto';
+                }, 200);
+
+                setTimeout(function() {
+                    img.style.minHeight = '500px';
+                }, 500);
+            }
+        }
+    }
+
+    // Ajustement de la grille sur mobile
+    setTimeout(function() {
+        const galleryGrid = document.querySelector('.gallery-grid');
+        if (galleryGrid && window.innerWidth <= 768) {
+            galleryGrid.style.gridTemplateColumns = '1fr';
+        }
+    }, 300);
 });
 
