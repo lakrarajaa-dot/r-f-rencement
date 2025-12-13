@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Jean Dupont</h1>
+            <p class="header-slogan">Développeur Web Passionné • Créateur de Solutions Digitales</p>
+        </div>
+    </header>
+
+    <!-- Galerie d'images -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galerie</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" alt="Paysage montagneux" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Aurores boréales" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b" alt="Océan et plage" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29" alt="Forêt en automne" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0" alt="Lac de montagne" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05" alt="Désert et dunes" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29" alt="Ville la nuit" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Cascade naturelle" class="gallery-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">À propos</h2>
+            <div class="about-content">
+                <p>
+                    Passionné par le développement web et les technologies modernes, je crée des expériences 
+                    digitales qui allient esthétique et fonctionnalité. Avec plusieurs années d'expérience 
+                    dans la création de sites web et d'applications, je mets mon expertise au service de 
+                    projets innovants et créatifs.
+                </p>
+                <p>
+                    Mon approche combine une attention particulière aux détails, une compréhension approfondie 
+                    des besoins utilisateurs et une maîtrise des dernières technologies web. Je crois en la 
+                    simplicité, l'efficacité et l'élégance dans chaque ligne de code que j'écris.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Envoyer</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jean Dupont. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
