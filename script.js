@@ -44,70 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 5000);
     }
 
-    // Effet de parallaxe léger sur le header au scroll (optionnel)
-    let lastScroll = 0;
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
-        const header = document.querySelector('.header');
-        
-        if (currentScroll <= 0) {
-            header.style.transform = 'translateY(0)';
-        }
-        
-        lastScroll = currentScroll;
-    });
-
-    // Animation d'apparition des éléments au scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observer les éléments de la galerie
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    galleryItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(item);
-    });
-
-    // Observer la section À propos
-    const aboutContent = document.querySelector('.about-content');
-    if (aboutContent) {
-        aboutContent.style.opacity = '0';
-        aboutContent.style.transform = 'translateY(20px)';
-        aboutContent.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(aboutContent);
-    }
-
-    // Observer les catégories de compétences
-    const skillCategories = document.querySelectorAll('.skill-category');
-    skillCategories.forEach((category, index) => {
-        category.style.opacity = '0';
-        category.style.transform = 'translateY(20px)';
-        category.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(category);
-    });
-
-    // Observer les éléments d'expérience
-    const experienceItems = document.querySelectorAll('.experience-item');
-    experienceItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateX(-20px)';
-        item.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
-        observer.observe(item);
-    });
-
     // Traitement des données au chargement (affecte INP)
     function processData() {
         const data = [];
@@ -127,4 +63,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
-
