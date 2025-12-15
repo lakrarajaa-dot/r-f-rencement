@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Mon Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Preload image LCP -->
+    <link rel="preload" as="image" href="images/header.webp">
 </head>
 <body>
     <!-- Header -->
@@ -12,32 +14,27 @@
         <div class="container">
             <h1 class="header-title">Jean Dupont</h1>
             <p class="header-slogan">Développeur Web Passionné • Créateur de Solutions Digitales</p>
-            <p class="header-intro">Bienvenue sur mon portfolio ! Je suis un développeur web full-stack avec plus de 8 ans d'expérience dans la création d'applications web modernes, d'interfaces utilisateur intuitives et de solutions digitales innovantes.</p>
-            <img src="https://picsum.photos/id/1018/1920/1080.jpg" alt="Header image" class="header-image" width="1920" height="1080">
+            <p class="header-intro">Bienvenue sur mon portfolio ! Je suis un développeur web full-stack avec plus de 8 ans d'expérience.</p>
+            <img src="images/header.webp" alt="Header image" class="header-image" width="1920" height="1080" loading="eager">
         </div>
     </header>
 
-    <!-- Banner pour CLS stable -->
+    <!-- Banner placeholder pour CLS -->
     <div id="banner-placeholder" style="height:140px;"></div>
 
     <!-- Galerie d'images -->
     <section class="gallery">
         <div class="container">
             <h2 class="section-title">Galerie</h2>
-            <p class="gallery-intro">Découvrez une sélection de mes réalisations les plus marquantes.</p>
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://picsum.photos/id/1011/1920/1080.jpg" alt="Projet 1" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/id/1012/1920/1080.jpg" alt="Projet 2" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/id/1013/1920/1080.jpg" alt="Projet 3" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/id/1015/1920/1080.jpg" alt="Projet 4" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/id/1016/1920/1080.jpg" alt="Projet 5" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/id/1019/1920/1080.jpg" alt="Projet 6" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/id/1020/1920/1080.jpg" alt="Projet 7" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item"><img src="https://picsum.photos/id/1021/1920/1080.jpg" alt="Projet 8" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item gallery-mobile-extra"><img src="https://picsum.photos/id/1022/1920/1080.jpg" alt="Projet 9" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item gallery-mobile-extra"><img src="https://picsum.photos/id/1023/1920/1080.jpg" alt="Projet 10" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item gallery-mobile-extra"><img src="https://picsum.photos/id/1024/1920/1080.jpg" alt="Projet 11" class="gallery-image" width="1920" height="1080"></div>
-                <div class="gallery-item gallery-mobile-extra"><img src="https://picsum.photos/id/1025/1920/1080.jpg" alt="Projet 12" class="gallery-image" width="1920" height="1080"></div>
+                <div class="gallery-item"><img src="images/projet1.webp" alt="Projet 1" width="800" height="450" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/projet2.webp" alt="Projet 2" width="800" height="450" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/projet3.webp" alt="Projet 3" width="800" height="450" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/projet4.webp" alt="Projet 4" width="800" height="450" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/projet5.webp" alt="Projet 5" width="800" height="450" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/projet6.webp" alt="Projet 6" width="800" height="450" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/projet7.webp" alt="Projet 7" width="800" height="450" loading="lazy"></div>
+                <div class="gallery-item"><img src="images/projet8.webp" alt="Projet 8" width="800" height="450" loading="lazy"></div>
             </div>
         </div>
     </section>
@@ -46,10 +43,7 @@
     <section class="about">
         <div class="container">
             <h2 class="section-title">À propos</h2>
-            <div class="about-content">
-                <p>Passionné par le développement web et les technologies modernes depuis plus de 8 ans, je crée des expériences digitales qui allient esthétique et fonctionnalité.</p>
-                <p>Mon approche combine une attention particulière aux détails et une maîtrise des dernières technologies web.</p>
-            </div>
+            <p>Passionné par le développement web et les technologies modernes depuis plus de 8 ans.</p>
         </div>
     </section>
 
@@ -59,24 +53,24 @@
             <h2 class="section-title">Mes Projets</h2>
             <div class="projects-grid">
                 <div class="project-item">
-                    <img src="https://picsum.photos/id/1026/1920/1080.jpg" alt="Projet Portfolio" class="project-image" width="1920" height="1080">
+                    <img src="images/projet9.webp" alt="Projet Portfolio" width="800" height="450" loading="lazy">
                     <div class="project-content">
                         <h3>Plateforme E-commerce</h3>
-                        <p>Application de vente en ligne complète avec gestion de panier, paiement sécurisé et système de recommandations personnalisées.</p>
+                        <p>Application de vente en ligne complète avec gestion de panier et paiement sécurisé.</p>
                     </div>
                 </div>
                 <div class="project-item">
-                    <img src="https://picsum.photos/id/1027/1920/1080.jpg" alt="Projet Dashboard" class="project-image" width="1920" height="1080">
+                    <img src="images/projet10.webp" alt="Projet Dashboard" width="800" height="450" loading="lazy">
                     <div class="project-content">
                         <h3>Dashboard Analytics</h3>
-                        <p>Tableau de bord interactif pour visualiser les performances et exporter des rapports.</p>
+                        <p>Tableau de bord interactif pour visualiser les performances.</p>
                     </div>
                 </div>
                 <div class="project-item">
-                    <img src="https://picsum.photos/id/1028/1920/1080.jpg" alt="Projet API" class="project-image" width="1920" height="1080">
+                    <img src="images/projet11.webp" alt="Projet API" width="800" height="450" loading="lazy">
                     <div class="project-content">
                         <h3>API REST Complète</h3>
-                        <p>Backend robuste avec authentification JWT et cache Redis pour garantir la performance.</p>
+                        <p>Backend robuste avec authentification JWT et cache Redis.</p>
                     </div>
                 </div>
             </div>
@@ -116,3 +110,4 @@
     <script src="script.js" defer></script>
 </body>
 </html>
+
