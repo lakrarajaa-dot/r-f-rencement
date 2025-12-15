@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Formulaire
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
 
@@ -30,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function showMessage(text, type) {
         formMessage.textContent = text;
         formMessage.className = 'form-message ' + type;
-        
         setTimeout(() => {
             formMessage.textContent = '';
             formMessage.className = 'form-message';
@@ -42,26 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => {
         const banner = document.createElement("div");
         banner.textContent = "Nouveau contenu chargé après le rendu";
-
         banner.style.backgroundColor = "#f0f0f0";
         banner.style.display = "flex";
         banner.style.alignItems = "center";
         banner.style.justifyContent = "center";
         banner.style.fontSize = "18px";
         banner.style.fontWeight = "bold";
-
         document.getElementById("banner-placeholder").appendChild(banner);
       }, 1500);
     });
-
-    // Resize optimisé
-    let resizeTimeout;
-    window.addEventListener("resize", () => {
-      if (resizeTimeout) return;
-      resizeTimeout = requestAnimationFrame(() => {
-        console.log("resize détecté");
-        resizeTimeout = null;
-      });
-    });
 });
-
