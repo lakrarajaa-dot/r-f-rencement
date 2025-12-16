@@ -2,6 +2,19 @@
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
+    const defaultImageFallback = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450"><rect width="800" height="450" fill="%23f5f5f5"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="%23667eea" font-size="28" font-family="Arial, sans-serif">Image%20indisponible</text></svg>';
+
+    function addImageFallbacks() {
+        document.querySelectorAll('img').forEach((img) => {
+            const fallback = img.dataset.fallback || defaultImageFallback;
+            img.addEventListener('error', () => {
+                if (img.dataset.fallbackApplied === 'true') return;
+                img.dataset.fallbackApplied = 'true';
+                img.src = fallback;
+            });
+        });
+    }
+    addImageFallbacks();
 
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
